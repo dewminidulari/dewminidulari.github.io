@@ -1,12 +1,10 @@
 /**
- * DEVMUNI DULARI - PORTFOLIO INTERACTIVITY & DATA ENGINE
- * Features: Project filtering & search, modal inspector, dynamic typewriter,
- * interactive canvas particles, skills tab system, theme toggle, copy email, contact form.
+ * DEVMINI DULARI - PORTFOLIO INTERACTIVITY & SCRIPTS
+ * Handles project filtering, modal views, typewriter effect,
+ * canvas background, skills tabs, theme switching, and contact handling.
  */
 
-// =========================================================================
-// 1. Projects Data Store (15 Complete Projects from User Details)
-// =========================================================================
+// Portfolio project dataset
 const portfolioProjects = [
   {
     id: "memorydot-erp",
@@ -14,16 +12,16 @@ const portfolioProjects = [
     category: "client",
     categoryLabel: "Client Project",
     icon: "fa-solid fa-network-wired",
-    shortDesc: "A full-featured client Enterprise Resource Planning (ERP) platform developed for MemoryDot to streamline workflows, inventory, and cross-departmental operations.",
-    fullDesc: "MemoryDot ERP was commissioned as an enterprise-grade management tool to eliminate operational silos. It integrates procurement tracking, real-time inventory adjustments, client billing, and executive analytics into a unified high-throughput database structure.",
-    techStack: ["Enterprise Arch", "Java", "MySQL", "Role-based Auth", "Reporting Engine"],
+    shortDesc: "A custom ERP system built for MemoryDot to handle inventory tracking, client billing, and cross-departmental operations.",
+    fullDesc: "Developed an enterprise resource planning tool for MemoryDot to streamline day-to-day business operations. The application handles procurement tracking, real-time inventory adjustments, client billing, and user permissions connected to a structured MySQL database.",
+    techStack: ["Java", "MySQL", "Role-Based Auth", "Reporting Engine", "JDBC"],
     features: [
-      "Custom role-based permissions (Admin, Manager, Staff)",
-      "Automated stock level alerts and invoice generation",
-      "Robust relational database schema with ACID guarantees",
-      "Executive business intelligence & financial reporting"
+      "Role-based access permissions (Admin, Manager, Staff)",
+      "Automated stock level tracking and invoice generation",
+      "Relational MySQL database schema with data consistency",
+      "Summary reporting for business and inventory tracking"
     ],
-    highlights: "Designed directly for client requirements with high reliability and zero-data-loss database design."
+    highlights: "Designed to direct client requirements for dependable day-to-day operations."
   },
   {
     id: "neolife-website",
@@ -31,16 +29,16 @@ const portfolioProjects = [
     category: "client",
     categoryLabel: "Client Project",
     icon: "fa-solid fa-globe",
-    shortDesc: "The official corporate web platform for Neolife Software Solutions showcasing enterprise software services, client case studies, and lead capture pipelines.",
-    fullDesc: "Engineered a high-performance corporate web portal for Neolife Software Solutions. Optimized for rapid loading speeds, SEO discoverability, clean responsive interfaces across all device viewports, and interactive customer inquiry flows.",
-    techStack: ["HTML5", "CSS3 / Modern UI", "JavaScript", "SEO Optimization", "Responsive Design"],
+    shortDesc: "The official corporate website for Neolife Software Solutions, showcasing services, portfolio items, and client inquiries.",
+    fullDesc: "Designed and developed the company website for Neolife Software Solutions. Built with clean HTML5, CSS3, and JavaScript, focusing on fast page load times, responsive mobile layouts, and an intuitive customer contact flow.",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UI/UX"],
     features: [
-      "Dynamic service catalog & interactive portfolio showcase",
-      "Conversion-optimized client inquiry and lead generation form",
-      "Cross-browser tested, 100% responsive fluid mobile layout",
-      "Modern CSS animations and brand-tailored visual identity"
+      "Service catalog and interactive portfolio showcase",
+      "Client inquiry and contact form with validation",
+      "Fully responsive across all screen sizes and mobile viewports",
+      "Smooth CSS transitions and modern visual identity"
     ],
-    highlights: "Delivered client satisfaction with fast load times and clean presentation of corporate software solutions."
+    highlights: "Delivered a clean, responsive digital web presence for the company."
   },
   {
     id: "pamasrilanka",
@@ -48,16 +46,16 @@ const portfolioProjects = [
     category: "client",
     categoryLabel: "Client Project",
     icon: "fa-solid fa-briefcase",
-    shortDesc: "Commercial client website developed for PamaSriLanka featuring product showcases, customer inquiries, and optimized digital brand presence.",
-    fullDesc: "Built an engaging commercial web presence for PamaSriLanka. Focused on rich user experience, intuitive navigation structure, multi-product category filtering, and direct customer engagement pathways.",
-    techStack: ["HTML5", "CSS3", "JavaScript", "MySQL Integration", "UI/UX Design"],
+    shortDesc: "Commercial client website developed for PamaSriLanka with product showcases, catalog browsing, and customer inquiries.",
+    fullDesc: "Built a commercial web presence for PamaSriLanka to showcase their product catalog online. The platform includes product category filters, high-resolution galleries, and direct contact channels for prospective buyers.",
+    techStack: ["HTML5", "CSS3", "JavaScript", "MySQL", "UI Design"],
     features: [
-      "Categorized showcase with high-res product galleries",
-      "Direct customer inquiry messaging and feedback mechanisms",
-      "Accessible typography and responsive touch-friendly navigation",
-      "Integrated analytics and contact channels"
+      "Categorized product gallery with image showcases",
+      "Direct customer inquiry and contact form",
+      "Mobile-friendly navigation and clean typography",
+      "Structured product organization and details view"
     ],
-    highlights: "Transformed client requirements into an active online brand footprint."
+    highlights: "Created an intuitive online catalog to handle direct customer inquiries."
   },
   {
     id: "class-predictor",
@@ -65,16 +63,16 @@ const portfolioProjects = [
     category: "data-pred",
     categoryLabel: "Predictive & Stats",
     icon: "fa-solid fa-graduation-cap",
-    shortDesc: "An intelligent academic predictive tool calculating GPA projections, degree eligibility verification, and class honors outcomes using statistical logic.",
-    fullDesc: "Bridging statistical analysis and software engineering, this system allows university undergraduates to evaluate their academic standing. It performs rigorous credit-weighting, grade conversions, simulation of future exam requirements, and statistical prediction for First Class, Second Upper, and Second Lower degree eligibility.",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Statistical Logic", "Predictive Algorithm"],
+    shortDesc: "An academic tool calculating GPA projections and predicting degree class eligibility using statistical grading logic.",
+    fullDesc: "Combining statistical concepts and web development, this system allows university undergraduates to evaluate their academic standing. It performs credit-weighted GPA calculations, checks course requirements against degree regulations, and projects future grades needed to achieve target degree classifications.",
+    techStack: ["JavaScript", "HTML5", "CSS3", "Statistical Logic", "GPA Algorithm"],
     features: [
-      "Dynamic GPA and weighted credit calculation engine",
-      "Conditional degree eligibility evaluation based on faculty regulations",
-      "Target class simulator: calculates required future grades to achieve target honors",
-      "Real-time chart visualization of academic performance trends"
+      "Weighted GPA calculation based on academic course credits",
+      "Degree eligibility checks against university academic criteria",
+      "Target class simulator calculating required future exam grades",
+      "Clear breakdown of academic performance trends"
     ],
-    highlights: "Practical application of statistical scoring models built for university students."
+    highlights: "Practical application connecting statistical scoring rules with university degree requirements."
   },
   {
     id: "vimanago",
@@ -82,16 +80,16 @@ const portfolioProjects = [
     category: "web",
     categoryLabel: "Web Application",
     icon: "fa-solid fa-plane-departure",
-    shortDesc: "Comprehensive flight reservation web application with route searching, seat availability, booking workflows, and passenger management.",
-    fullDesc: "VimanaGo provides an intuitive end-to-end flight booking journey. Users can search for domestic and international itineraries, select seat tiers, view layovers, input passenger manifests, and simulate instant booking confirmations with a modern interface.",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Booking Logic", "Local State"],
+    shortDesc: "Flight reservation web application featuring route searching, seat selection, booking workflows, and passenger management.",
+    fullDesc: "An end-to-end flight booking web application where travelers can search flights by origin, destination, and departure dates, choose seating classes, fill in passenger details, and receive an instant booking confirmation.",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Booking Logic", "Local Storage"],
     features: [
-      "Interactive departure/arrival search with airport auto-suggest",
-      "Multi-passenger ticketing and seat class selection (Economy, Business)",
-      "Dynamic price calculations factoring in dates, luggage, and taxes",
-      "Responsive flight summary boarding pass generation"
+      "Interactive departure/arrival search with airport selection",
+      "Multi-passenger ticketing and seat class options (Economy & Business)",
+      "Dynamic price calculations factoring in baggage and taxes",
+      "Flight summary view and digital boarding pass layout"
     ],
-    highlights: "Seamless booking UX inspired by modern aviation reservation systems."
+    highlights: "Designed with a focus on intuitive multi-step booking workflows."
   },
   {
     id: "beautyshop",
@@ -99,50 +97,50 @@ const portfolioProjects = [
     category: "web",
     categoryLabel: "Web & E-Commerce",
     icon: "fa-solid fa-bag-shopping",
-    shortDesc: "A complete online cosmetics & skincare marketplace with dynamic product catalogs, relational MySQL database, shopping cart, and order processing.",
-    fullDesc: "BeautyShop is a full-featured e-commerce platform crafted for beauty and skincare retail. It incorporates persistent customer carts, category filters (skincare, makeup, haircare), product reviews, and a robust MySQL backend for product and order management.",
-    techStack: ["HTML5", "CSS3", "JavaScript", "MySQL", "Session Mgmt"],
+    shortDesc: "Online cosmetics and skincare store featuring product browsing, shopping cart functionality, and MySQL database integration.",
+    fullDesc: "An e-commerce website designed for beauty and skincare retail. Users can filter items by category (skincare, makeup, haircare), add items to a persistent cart, and navigate through a structured checkout flow.",
+    techStack: ["HTML5", "CSS3", "JavaScript", "MySQL", "Session Storage"],
     features: [
-      "Real-time cart calculation with promo code discounts and shipping rates",
-      "Relational product inventory database with stock deduction",
-      "User authentication, order history, and order placement workflow",
-      "Vibrant modern UI with responsive touch-friendly mobile layouts"
+      "Shopping cart with quantity updates and order total calculation",
+      "Product categorization and keyword search filters",
+      "Relational database structure for inventory and orders",
+      "Clean, responsive product catalog layout"
     ],
-    highlights: "Full lifecycle e-commerce implementation from front-end cart to relational database."
+    highlights: "Full implementation of core retail workflows from catalog to checkout."
   },
   {
     id: "hotel-booking",
     title: "Hotel Booking Management Desktop Application",
     category: "desktop",
-    categoryLabel: "Desktop / Enterprise",
+    categoryLabel: "Desktop / Java",
     icon: "fa-solid fa-hotel",
-    shortDesc: "Enterprise desktop hotel management software engineered in Java and MySQL for reservation scheduling, room availability, customer records, and billing.",
-    fullDesc: "Developed an enterprise desktop management system for the hospitality sector using Java OOP principles and JDBC connectivity to MySQL. The application streamlines front-desk check-in/check-out, room category pricing, guest registries, and invoice generation.",
-    techStack: ["Java", "Java Swing / GUI", "MySQL", "JDBC", "OOP Architecture"],
+    shortDesc: "Desktop hotel management software engineered in Java and MySQL for reservation scheduling, room availability, and billing.",
+    fullDesc: "An enterprise desktop application developed in Java Swing with JDBC connectivity to MySQL. Built for hotel front-desk staff to manage reservations, check-in and check-out workflows, room availability, and invoice generation.",
+    techStack: ["Java", "Java Swing", "MySQL", "JDBC", "OOP Architecture"],
     features: [
-      "Visual room allocation grid indicating occupied, vacant, and cleaning states",
-      "Automated guest billing with tax and ancillary service charges",
-      "Secure SQL transaction handling ensuring booking consistency",
-      "Searchable guest database and printable reservation receipts"
+      "Room allocation overview showing occupied, vacant, and maintenance states",
+      "Automated guest billing calculation with itemized service charges",
+      "Transactional database operations ensuring booking consistency",
+      "Searchable guest registry and receipt generation"
     ],
-    highlights: "Engineered following strict Object-Oriented design patterns and database normalization."
+    highlights: "Built using Object-Oriented design patterns and structured database normalization."
   },
   {
     id: "autoglam",
     title: "AutoGlam Car Wash Management System",
     category: "desktop",
-    categoryLabel: "Desktop / Enterprise",
+    categoryLabel: "Desktop / Java",
     icon: "fa-solid fa-car-side",
-    shortDesc: "Desktop service management solution built with Java and MySQL to automate vehicle wash scheduling, service bay allocation, and revenue reporting.",
-    fullDesc: "AutoGlam simplifies vehicle service operations. Front-office staff can log customer vehicles, assign tailored wash packages (exterior, interior detail, ceramic wax), allocate technicians, and generate daily revenue summaries.",
-    techStack: ["Java", "MySQL", "Desktop UI", "JDBC", "Data Normalization"],
+    shortDesc: "Desktop service management solution built with Java and MySQL to organize car wash scheduling, service bays, and billing.",
+    fullDesc: "AutoGlam helps car wash service centers track vehicle queue statuses, manage service packages (exterior wash, full interior detailing, waxing), assign service staff, and generate daily revenue summaries.",
+    techStack: ["Java", "Java Swing", "MySQL", "JDBC", "Database Design"],
     features: [
-      "Vehicle queue and service status tracker (In-Progress, Completed)",
-      "Tiered service pricing matrix with customizable add-on packages",
-      "Relational customer vehicle history for loyalty management",
-      "Financial ledger and daily/monthly income audit reports"
+      "Vehicle queue tracker showing service progression in real time",
+      "Service package selection with customizable add-ons and pricing",
+      "Customer and vehicle service records",
+      "Daily and monthly billing summaries for business accounting"
     ],
-    highlights: "Eliminated paper records and accelerated customer check-in by 60%."
+    highlights: "Streamlined operational records into an organized desktop database workflow."
   },
   {
     id: "period-tracker",
@@ -150,16 +148,16 @@ const portfolioProjects = [
     category: "mobile-iot",
     categoryLabel: "Health & Stats",
     icon: "fa-solid fa-heart-pulse",
-    shortDesc: "Privacy-centric menstrual health and cycle prediction application built in TypeScript utilizing statistical cycle averages and calendar modeling.",
-    fullDesc: "A thoughtfully engineered health-tech application focusing on female wellness. Utilizing statistical cycle modeling and variance calculations, the app predicts forthcoming cycles, fertile windows, and ovulation days while ensuring all sensitive personal health data remains strictly private on the user's client device.",
-    techStack: ["TypeScript", "Cycle Algorithms", "Statistical Estimation", "Local Storage", "CSS3"],
+    shortDesc: "Privacy-focused cycle tracking application built in TypeScript, using statistical rolling averages to estimate cycle phases.",
+    fullDesc: "A client-side health tracking tool that estimates upcoming cycles, ovulation days, and fertile windows using rolling statistical averages based on historical log entries. All data is stored locally on the user's device for privacy.",
+    techStack: ["TypeScript", "Statistical Estimation", "Local Storage", "CSS3", "HTML5"],
     features: [
-      "Statistical rolling-average estimation of luteal and follicular phases",
-      "Interactive visual calendar highlighting predicted cycle days and fertile windows",
-      "Symptom and mood logging with statistical trend analysis",
-      "100% offline, privacy-first client-side data persistence"
+      "Rolling average calculation for cycle lengths and phase predictions",
+      "Visual calendar highlighting predicted cycle days and fertile windows",
+      "Symptom and mood logging to observe personal health patterns",
+      "100% offline, privacy-first client-side data storage"
     ],
-    highlights: "Demonstrates TypeScript type safety coupled with statistical cycle modeling."
+    highlights: "Practical implementation of TypeScript type safety combined with statistical rolling estimation."
   },
   {
     id: "shoe-mart",
@@ -167,101 +165,101 @@ const portfolioProjects = [
     category: "web",
     categoryLabel: "Java Web / E-Commerce",
     icon: "fa-solid fa-shoe-prints",
-    shortDesc: "Java-based web e-commerce application for footwear retail featuring size/color matrix selection, customer checkout, and relational MySQL inventory.",
-    fullDesc: "Built using Java Web architecture following the MVC (Model-View-Controller) design pattern. Implemented session-based cart management, database product catalogs, order processing pipelines, and administrative product management.",
-    techStack: ["Java Web", "Servlets / JSP", "MySQL", "MVC Pattern", "HTML/CSS"],
+    shortDesc: "Java-based web store for footwear retail with size and color selection, customer cart management, and MySQL database.",
+    fullDesc: "Developed using Java Servlets, JSP, and MySQL following the MVC design pattern. The platform includes product catalogs with size availability, session-based cart management, and administrative screens for product updates.",
+    techStack: ["Java Web", "Servlets & JSP", "MySQL", "MVC Pattern", "HTML/CSS"],
     features: [
       "Footwear catalog with size availability and variant filtering",
-      "Secure user sessions, login authentication, and cart persistence",
-      "Back-office administrator portal to update inventory and view orders",
-      "Clean relational database schema with foreign-key referential integrity"
+      "Session-based cart management and customer checkout",
+      "Admin section to add, update, and manage inventory items",
+      "Relational database schema with referential integrity"
     ],
-    highlights: "Solid demonstration of Java Web technologies and MVC software engineering."
+    highlights: "Applied Java MVC architecture and servlet-based web engineering."
   },
   {
     id: "zeyora-perfume",
-    title: "Zeyora Perfume Luxury E-Commerce",
+    title: "Zeyora Perfume E-Commerce Store",
     category: "web",
     categoryLabel: "Java Web / E-Commerce",
     icon: "fa-solid fa-spray-can-sparkles",
-    shortDesc: "Luxury fragrance web marketplace built with Java Web and MySQL, featuring scent-family categorization, perfume notes breakdown, and sleek cart flows.",
-    fullDesc: "Zeyora Perfume offers an elegant digital storefront for luxury perfumery. Built on a Java web backend connected to MySQL, it categorizes fragrances by top, heart, and base notes, facilitating a unique sensory-driven discovery experience.",
-    techStack: ["Java Web", "MySQL", "HTML5", "Modern CSS", "JavaScript"],
+    shortDesc: "Fragrance e-commerce web platform built with Java Web and MySQL, featuring scent-family categorization and clean cart flow.",
+    fullDesc: "An online store for perfumes and fragrances built with a Java web backend and MySQL. Products are categorized by scent notes (floral, woody, citrus) to help users browse according to their preferences, backed by session-based shopping cart handling.",
+    techStack: ["Java Web", "Servlets & JSP", "MySQL", "HTML5", "Modern CSS"],
     features: [
-      "Interactive fragrance discovery based on scent notes (Woody, Floral, Citrus)",
-      "Luxury glassmorphic presentation with responsive product showcases",
-      "Shopping cart, checkout computation, and customer order management",
-      "Robust relational database schema for perfume inventories"
+      "Scent-note categorization and fragrance search filters",
+      "Interactive product details view and customer reviews",
+      "Cart calculation, shipping estimations, and checkout flow",
+      "Structured database tables for perfume inventory and orders"
     ],
-    highlights: "Combines high-end visual aesthetics with reliable Java enterprise backend logic."
+    highlights: "Clean visual presentation paired with structured Java Web backend logic."
   },
   {
     id: "floralanka",
-    title: "FloraLanka - Android M-Commerce Flower App",
+    title: "FloraLanka - Android Flower Delivery App",
     category: "mobile-iot",
     categoryLabel: "Android Mobile",
     icon: "fa-solid fa-seedling",
-    shortDesc: "Native Android mobile commerce application for flower arrangements and bouquet delivery with order placement, catalog browsing, and cart management.",
-    fullDesc: "FloraLanka brings floral gifting to mobile devices. Built natively in Android Studio using Java and XML layouts, users can browse seasonal blossoms, configure personalized greeting cards with their orders, track order stages, and manage delivery addresses.",
-    techStack: ["Android Studio", "Java", "Android XML", "SQLite", "Mobile UX"],
+    shortDesc: "Native Android mobile app for browsing floral arrangements, personalizing greetings, and placing flower delivery orders.",
+    fullDesc: "Built in Android Studio using Java and XML layouts. The application allows users to browse flower collections, attach custom greeting card messages, select delivery dates, and store orders locally using SQLite.",
+    techStack: ["Android Studio", "Java", "Android XML", "SQLite", "Mobile UI"],
     features: [
-      "Fluid Android UI with RecyclerViews, custom adapters, and CardViews",
-      "Local SQLite caching for lightning-fast catalog viewing and cart storage",
-      "Custom card message attachments and delivery date selector",
-      "Clean mobile user experience adhering to Material Design guidelines"
+      "RecyclerView-based product catalogs with search and categories",
+      "Order configuration with personalized greeting messages and date picker",
+      "Local SQLite storage for offline caching and saved items",
+      "Clean Android user interface following Material Design practices"
     ],
-    highlights: "Native mobile development experience demonstrating the Android application lifecycle."
+    highlights: "Hands-on experience with native Android architecture, activities, and local databases."
   },
   {
     id: "lms-system",
     title: "Learning Management System (LMS)",
     category: "desktop",
-    categoryLabel: "Enterprise Systems",
+    categoryLabel: "Enterprise / Java",
     icon: "fa-solid fa-book-open-reader",
-    shortDesc: "Multi-role educational management platform engineered in Java and MySQL for course administration, student enrollment, grading, and lecture scheduling.",
-    fullDesc: "Engineered to facilitate institutional education workflows. Supports dedicated portals for Administrators, Lecturers, and Students. Lecturers can publish course materials, record assignment grades, and track attendance, while students can track module progress.",
-    techStack: ["Java", "OOP Architecture", "MySQL", "Role-based Access", "Data Security"],
+    shortDesc: "Multi-role academic management system built in Java and MySQL for course administration, student enrollment, and grading.",
+    fullDesc: "Designed to handle institutional academic workflows. Features separated roles for Administrators, Lecturers, and Students. Supports course registration, grade entry, timetable schedules, and student progress reports.",
+    techStack: ["Java", "OOP", "MySQL", "Role-Based Access", "JDBC"],
     features: [
-      "Role-based privilege separation for Administrators, Instructors, and Students",
-      "Module enrollment, timetable viewer, and GPA calculation engine",
-      "Assignment grading matrix and student academic progress reports",
-      "Relational schema normalized to 3NF for academic data integrity"
+      "Role-based authentication for admins, instructors, and students",
+      "Module registration and student grading management",
+      "Academic report generation and performance tracking",
+      "Normalized relational database structure"
     ],
-    highlights: "Scalable enterprise Java solution handling complex multi-user education hierarchies."
+    highlights: "Structured enterprise Java desktop application managing multi-role workflows."
   },
   {
     id: "event-management",
-    title: "Event Management System",
+    title: "Event Management & Ticketing System",
     category: "desktop",
-    categoryLabel: "Enterprise / C#",
+    categoryLabel: "Desktop / C#",
     icon: "fa-solid fa-calendar-check",
-    shortDesc: "Robust event coordination and ticketing management platform developed in C# and .NET Framework for venue scheduling, attendee registration, and ticketing.",
-    fullDesc: "Built in C# using .NET and SQL, this application provides corporate event planners and conference coordinators with complete control over event agendas, seat reservations, attendee registrations, speaker lineups, and ticket verification.",
-    techStack: ["C#", ".NET Framework", "SQL / Database", "Event Architecture", "Windows Forms / WPF"],
+    shortDesc: "Desktop event management application built with C# and .NET for scheduling events, managing attendee registrations, and issuing tickets.",
+    fullDesc: "Developed in C# using .NET and SQL database connectivity. Planners can manage event schedules, attendee lists, ticket allocations, and review financial summaries of ticket sales.",
+    techStack: ["C#", ".NET", "SQL / Database", "Windows Forms", "LINQ"],
     features: [
-      "Interactive venue layout booking with capacity threshold management",
-      "Attendee registration with automatic barcode/ticket ID generation",
-      "Speaker schedule and session conflict resolution logic",
-      "Financial reports tracking ticket revenues and sponsorship funds"
+      "Event schedule planning and venue capacity management",
+      "Attendee registration with unique ticket ID generation",
+      "Session conflict detection for speakers and halls",
+      "Revenue reports and registration statistics"
     ],
-    highlights: "Showcases C# .NET language capabilities, delegates, LINQ, and enterprise database integration."
+    highlights: "Built with C# and .NET Windows Forms with relational database integration."
   },
   {
     id: "wally-robot",
-    title: "Wally-Robot: Autonomous Arduino Robot",
+    title: "Wally-Robot: Autonomous Robotic Car",
     category: "mobile-iot",
     categoryLabel: "Robotics & IoT",
     icon: "fa-solid fa-robot",
-    shortDesc: "Autonomous obstacle-avoiding robotic vehicle built with Arduino C/C++, ultrasonic sensors, servo steering, and motor driver telemetry.",
-    fullDesc: "Wally-Robot is an embedded robotics project engineered using an Arduino microcontroller. Utilizing an HC-SR04 ultrasonic rangefinder mounted on a servo motor, the robot dynamically scans surrounding topography in real-time, calculates obstacle distance vectors, and executes avoidance maneuvers.",
-    techStack: ["Arduino C/C++", "Ultrasonic Sensors", "Servo Control", "Motor Drivers", "Hardware Logic"],
+    shortDesc: "Obstacle-avoiding robotic vehicle built with Arduino C/C++, ultrasonic sensors, servo steering, and motor driver control.",
+    fullDesc: "An embedded hardware project using an Arduino microcontroller and an HC-SR04 ultrasonic sensor mounted on a servo motor. The robot continuously scans forward and side angles for obstacles, determines the clearest path, and commands DC motors to steer around obstacles.",
+    techStack: ["Arduino C/C++", "Ultrasonic Sensor", "Servo Motor", "Motor Drivers", "Embedded Logic"],
     features: [
-      "Real-time sensor signal processing for proximity calculation",
-      "Autonomous 180-degree sweep obstacle detection algorithms",
-      "PWM-driven differential motor steering for precise spatial navigation",
-      "Hardware circuit design with battery voltage regulation and fail-safes"
+      "Real-time obstacle distance measurement using ultrasonic pulses",
+      "180-degree sweep scanning for path evaluation",
+      "Differential motor control for smooth turning and maneuvering",
+      "Standalone battery-powered chassis with onboard voltage regulation"
     ],
-    highlights: "Practical implementation of hardware programming, sensor telemetry, and autonomous logic."
+    highlights: "Hands-on experience in embedded C++ programming, sensor telemetry, and hardware integration."
   }
 ];
 
@@ -603,7 +601,7 @@ function renderProjects(projectsList) {
       <div class="project-tech-tags">${tagsHtml}</div>
       <div class="project-card-footer">
         <button class="project-detail-btn" data-project-id="${project.id}">
-          <span>View Architecture & Specs</span>
+          <span>View Project Details</span>
           <i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
@@ -725,14 +723,14 @@ function openProjectModal(projectId) {
     <h2 class="modal-project-title" id="modal-project-title">${escapeHtml(project.title)}</h2>
     <p class="modal-project-desc">${escapeHtml(project.fullDesc)}</p>
 
-    <h3 class="modal-section-title">Key Architectural Features:</h3>
+    <h3 class="modal-section-title">Key Features</h3>
     <ul class="modal-features-list">${featuresHtml}</ul>
 
-    <h3 class="modal-section-title">Technologies & Frameworks:</h3>
+    <h3 class="modal-section-title">Technologies Used</h3>
     <div class="modal-tech-stack">${techHtml}</div>
 
-    <div class="modal-highlight-box" style="padding: 1rem; background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--accent-blue); border-radius: 6px; font-size: 0.9rem; color: var(--text-secondary); margin-top: 1rem;">
-      <strong style="color: var(--text-primary);"><i class="fa-solid fa-star"></i> Engineering Highlight:</strong> ${escapeHtml(project.highlights)}
+    <div class="modal-highlight-box" style="padding: 1rem; background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--accent-blue); border-radius: 6px; font-size: 0.9rem; color: var(--text-secondary); margin-top: 1.25rem;">
+      <strong style="color: var(--text-primary);"><i class="fa-solid fa-lightbulb"></i> Project Note:</strong> ${escapeHtml(project.highlights)}
     </div>
   `;
 
